@@ -1,43 +1,116 @@
-.page-container { padding: 20px; }
-.page-header { margin-bottom: 25px; }
-.page-header h2 { color: #2c3e50; margin: 0; }
-.page-header p { color: #7f8c8d; font-size: 0.9rem; }
+.page-container { 
+  width: 100% !important;
+  padding: 30px; /* El espacio se da hacia adentro */
+  min-height: calc(100vh - 70px);
+  background-color: #f8fafc;
+}
 
+.page-header { 
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.page-header h2 { 
+  color: #1e293b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.page-header p { 
+  color: #64748b; 
+  margin-top: 5px;
+}
+
+/* GRID RESPONSIVO AL 100% */
 .content-grid {
   display: grid;
-  grid-template-columns: 350px 1fr; /* Formulario pequeño a la izquierda, tabla grande a la derecha */
-  gap: 20px;
+  grid-template-columns: 350px 1fr; /* 350px fijo, 1fr toma TODO el resto */
+  gap: 30px;
+  width: 100%;
 }
 
 .card {
   background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
 }
 
-.form-section form { display: flex; flex-direction: column; gap: 12px; }
+.form-section form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+}
+
 .form-section input {
   padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
   outline: none;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-section input:focus {
+  border-color: #3b82f6;
 }
 
 .btn-save {
-  background: #3498db;
+  background: #3b82f6;
   color: white;
   border: none;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 14px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.btn-save:hover { background: #2980b9; }
+.btn-save:hover { 
+  background: #2563eb; 
+  transform: translateY(-1px);
+}
 
-/* Estilo de la tabla */
-.custom-table { width: 100%; border-collapse: collapse; }
-.custom-table th { text-align: left; padding: 12px; border-bottom: 2px solid #f1f1f1; color: #7f8c8d; }
-.custom-table td { padding: 12px; border-bottom: 1px solid #f1f1f1; }
+/* TABLA QUE OCUPA TODO EL ANCHO */
+.table-section {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.custom-table { 
+  width: 100%; 
+  border-collapse: collapse;
+}
+
+.custom-table th { 
+  text-align: left; 
+  padding: 16px; 
+  border-bottom: 2px solid #f1f5f9; 
+  color: #64748b; 
+  background-color: #f8fafc;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.custom-table td { 
+  padding: 16px; 
+  border-bottom: 1px solid #f1f5f9; 
+  color: #334155;
+}
+
+.custom-table tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* MEDIA QUERY PARA MÓVILES */
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr; 
+  }
+  
+  .page-container {
+    padding: 15px;
+  }
+}

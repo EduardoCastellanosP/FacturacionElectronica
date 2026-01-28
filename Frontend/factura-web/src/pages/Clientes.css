@@ -1,0 +1,131 @@
+/* src/pages/Clientes.css */
+
+.container {
+  width: 100% !important;
+  padding: 30px;
+  min-height: calc(100vh - 70px);
+  background-color: #f8fafc;
+  animation: fadeIn 0.5s ease-in-out;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #1e293b;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  border-left: 5px solid #3498db;
+  padding-left: 15px;
+}
+
+/* GRID PRINCIPAL: Formulario a la izquierda, Tabla a la derecha */
+.content-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* 350px para el form, el resto para la tabla */
+  gap: 30px;
+  width: 100%;
+  align-items: start;
+}
+
+/* Tarjeta del Formulario */
+.form-card {
+  background: white;
+  padding: 25px; /* Corregido de 200px a 25px */
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input {
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  outline: none;
+  width: 100%;
+}
+
+.form-group input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-card button {
+  background-color: #3498db;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%; /* Botón a lo ancho del formulario */
+}
+
+.form-card button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+/* Contenedor de la Tabla */
+.table-section {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f8fafc;
+}
+
+th {
+  text-align: left;
+  padding: 16px;
+  color: #64748b;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+td {
+  padding: 16px;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+}
+
+tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Móviles */
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
