@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Factura.Application/1.0.0": {
+        "dependencies": {
+          "Factura.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Factura.Application.dll": {}
+        }
+      },
+      "Factura.Domain/1.0.0": {
+        "runtime": {
+          "Factura.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Factura.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Factura.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

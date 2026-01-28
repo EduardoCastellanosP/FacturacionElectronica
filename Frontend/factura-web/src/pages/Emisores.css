@@ -1,0 +1,43 @@
+.page-container { padding: 20px; }
+.page-header { margin-bottom: 25px; }
+.page-header h2 { color: #2c3e50; margin: 0; }
+.page-header p { color: #7f8c8d; font-size: 0.9rem; }
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* Formulario pequeño a la izquierda, tabla grande a la derecha */
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-section form { display: flex; flex-direction: column; gap: 12px; }
+.form-section input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.btn-save {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-save:hover { background: #2980b9; }
+
+/* Estilo de la tabla */
+.custom-table { width: 100%; border-collapse: collapse; }
+.custom-table th { text-align: left; padding: 12px; border-bottom: 2px solid #f1f1f1; color: #7f8c8d; }
+.custom-table td { padding: 12px; border-bottom: 1px solid #f1f1f1; }

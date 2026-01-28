@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Application/Factura.Application.csproj": {}
+  },
+  "projects": {
+    "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Application/Factura.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Application/Factura.Application.csproj",
+        "projectName": "Factura.Application",
+        "projectPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Application/Factura.Application.csproj",
+        "packagesPath": "/home/linux/.nuget/packages/",
+        "outputPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/linux/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Domain/Factura.Domain.csproj": {
+                "projectPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Domain/Factura.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Domain/Factura.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Domain/Factura.Domain.csproj",
+        "projectName": "Factura.Domain",
+        "projectPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Domain/Factura.Domain.csproj",
+        "packagesPath": "/home/linux/.nuget/packages/",
+        "outputPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/linux/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
