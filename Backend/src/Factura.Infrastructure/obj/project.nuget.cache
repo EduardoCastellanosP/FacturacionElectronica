@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zH9nGKDLZqDAoUNcC1GszrI3go8fEEjrh8v0X7PhMwQO93ZRqH2wWH5xkeP+bmclvNUhQWwymdcFk/3lc+ooWg==",
+  "dgSpecHash": "+gwjpPT4g7NhubFxwhoO9kIsPyE7N3PicrwnhXPBzIkctlmgxYnqiPnknPtsUbWIPjDf7XVEG8J3WzXGlY1cbQ==",
   "success": true,
-  "projectFilePath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj",
+  "projectFilePath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/home/linux/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/linux/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

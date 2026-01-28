@@ -3280,11 +3280,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Api/Factura.Api.csproj",
+      "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Api/Factura.Api.csproj",
       "projectName": "Factura.Api",
-      "projectPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Api/Factura.Api.csproj",
+      "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Api/Factura.Api.csproj",
       "packagesPath": "/home/linux/.nuget/packages/",
-      "outputPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Api/obj/",
+      "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/linux/.nuget/NuGet/NuGet.Config"
@@ -3299,8 +3299,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj": {
-              "projectPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj"
+            "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj": {
+              "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj"
             }
           }
         }

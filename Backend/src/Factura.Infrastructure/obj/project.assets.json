@@ -2691,11 +2691,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj",
+      "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj",
       "projectName": "Factura.Infrastructure",
-      "projectPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj",
+      "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj",
       "packagesPath": "/home/linux/.nuget/packages/",
-      "outputPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Infrastructure/obj/",
+      "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/linux/.nuget/NuGet/NuGet.Config"
@@ -2710,11 +2710,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Application/Factura.Application.csproj": {
-              "projectPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Application/Factura.Application.csproj"
+            "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Application/Factura.Application.csproj": {
+              "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Application/Factura.Application.csproj"
             },
-            "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Domain/Factura.Domain.csproj": {
-              "projectPath": "/home/linux/Documentos/ConexusApp/Backend/src/Factura.Domain/Factura.Domain.csproj"
+            "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Domain/Factura.Domain.csproj": {
+              "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Domain/Factura.Domain.csproj"
             }
           }
         }
