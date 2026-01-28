@@ -16,6 +16,9 @@ namespace Factura.Infrastructure.Persitence.Configurations
         {
             // Id heredada de BaseEntity
             builder.HasKey(e => e.Id);
+        
+            builder.Property(e => e.Nit)
+                .HasMaxLength(50);
 
             builder.Property(e => e.Nombres)
                 .IsRequired() // Los nombres son obligatorios

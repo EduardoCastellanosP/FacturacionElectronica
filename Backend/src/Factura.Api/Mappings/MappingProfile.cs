@@ -12,7 +12,7 @@ namespace Factura.Api.Mappings
             CreateMap<Cliente, ListarClienteDto>();
 
             CreateMap<Cliente, ObtenerClienteDetalleDto>().ForMember(dest => dest.Nombres, opt => opt.MapFrom(src => $"{src.Nombres} {src.Apellidos}"));
-            CreateMap<ActualizarClienteDto, Cliente>(); // Para el PUT
+            CreateMap<ActualizarClienteDto, Cliente>().ReverseMap(); // Para el PUT
 
             // --- INVOICE (FACTURA) ---
             CreateMap<Invoice, ObtenerInvoiceDto>();

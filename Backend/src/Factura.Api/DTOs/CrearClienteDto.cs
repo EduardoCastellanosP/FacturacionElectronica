@@ -8,12 +8,16 @@ namespace Factura.Api.DTOs
         public CrearClienteDto() { }
 
 
-        public CrearClienteDto(string? nombre, string? apellido)
+        public CrearClienteDto(string? nit, string? nombres, string? apellidos, string? direccion, string? telefono, string? email)
         {
-            Nombres = nombre;
-            Apellidos = apellido;
+            Nit = nit;
+            Nombres = nombres;
+            Apellidos = apellidos;
+            Direccion = direccion;
+            Telefono = telefono;
+            Email = email;
         }
-
+        public string? Nit { get; set; }
         public string? Nombres { get; set; }
         public string? Apellidos { get; set; }
         public string? Direccion { get; set; }

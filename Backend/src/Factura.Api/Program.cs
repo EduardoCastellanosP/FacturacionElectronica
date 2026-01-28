@@ -4,61 +4,52 @@ using Factura.Infrastructure.Persistence;
 using Factura.Infrastructure.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
+
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ==========================
-// Database (PostgreSQL)
-// ==========================
+// 1. Base de Datos
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseNpgsql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
-        npgsql =>
-        {
-            npgsql.MigrationsAssembly("Factura.Infrastructure");
-        });
+        npgsql => npgsql.MigrationsAssembly("Factura.Infrastructure"));
 });
 
-// ==========================
-// Controllers & Swagger
-// ==========================
+// 2. Controladores y JSON
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
     });
+
+// 3. Dependencias (UnitOfWork, AutoMapper)
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-// Opción más segura para evitar ambigüedad:
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// 1. Definir la política
+// 4. CONFIGURACIÓN DE CORS (Corregida)
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowReactApp",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:5173") // Tu puerto de React
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin() // Permite cualquier origen para evitar errores en desarrollo
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
 
 var app = builder.Build();
 
-// 2. Habilitar la política (DEBE ir antes de UseAuthorization)
-app.UseCors("AllowReactApp");
-
-app.UseAuthorization();
-
-
-
 // ==========================
-// Middleware
+// ORDEN DEL MIDDLEWARE (CRÍTICO)
 // ==========================
+
+// El orden correcto es: CORS -> Routing -> Auth -> Endpoints
+app.UseCors("AllowAll"); // Primero habilitamos los permisos de red
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -67,10 +58,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
-app.UseCors("WebFacturaPolicy");
-app.MapControllers();
-// ... después de app.MapControllers();
 
+app.MapControllers();
+
+// 5. Seed de Datos Iniciales
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -82,7 +73,7 @@ using (var scope = app.Services.CreateScope())
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "Ocurrió un error al insertar los datos iniciales.");
+        logger.LogError(ex, "Error al insertar datos iniciales.");
     }
 }
 

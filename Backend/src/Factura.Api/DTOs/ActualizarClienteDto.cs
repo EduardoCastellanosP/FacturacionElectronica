@@ -10,14 +10,16 @@ namespace Factura.Api.DTOs
         public ActualizarClienteDto()
         {
         }
-        public ActualizarClienteDto(string? nombres, string? apellidos, string? direccion, string? telefono, string? email)
+        public ActualizarClienteDto(string? nit, string? nombres, string? apellidos, string? direccion, string? telefono, string? email)
         {
+            Nit = nit;
             Nombres = nombres;
             Apellidos = apellidos;
             Direccion = direccion;
             Telefono = telefono;
             Email = email;
         }
+        public string? Nit { get; set; }
         public string? Nombres { get; set; }
         public string? Apellidos { get; set; }
         public string? Direccion { get; set; }

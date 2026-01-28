@@ -8,6 +8,7 @@ namespace Backend.src.Factura.Domain.Entities
 {
     public class Cliente : BaseEntity
     {
+        public string? Nit { get; set; }
         public string? Nombres { get; set; }
         public string? Apellidos { get; set; }
         public string? Email { get; set; }

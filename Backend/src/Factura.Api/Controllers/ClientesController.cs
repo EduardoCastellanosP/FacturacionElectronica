@@ -61,7 +61,7 @@ public class ClientesController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult<ActualizarClienteDto>> ActualizarClienteAsync(Guid id, ActualizarClienteDto actualizarClienteDto)
+    public async Task<ActionResult<ActualizarClienteDto>> ActualizarClienteAsync (Guid id, [FromBody] ActualizarClienteDto actualizarClienteDto)
     {
         var cliente = await _unitOfWork.Clientes.ObtenerClientePorIdAsync(id);
         if (cliente == null) return NotFound();
