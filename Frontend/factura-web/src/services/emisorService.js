@@ -15,3 +15,13 @@ export const createEmisor = async (nuevoEmisor) => {
         throw error;
     }
 };
+
+export const deleteEmisor = async (Id) => {
+    const response = await api.delete(`/Emisor/${Id}`);
+    return response.data;
+}
+
+export const editarEmisor = async (Id, emisorActualizado) => {
+    const response = await api.put(`/Emisor/${Id}`, emisorActualizado);
+    return response.data;
+}

@@ -1,0 +1,146 @@
+/* Contenedor Raíz */
+.factura-root {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  padding: 30px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.factura-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Tarjetas */
+.factura-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+  border: 1px solid #e1e4e8;
+}
+
+/* Títulos */
+.factura-header h2 {
+  color: #1a202c;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Formulario */
+.factura-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* ESTILO PARA LOS SELECTS (Aquí está el arreglo de las letras blancas) */
+.factura-form select, 
+.factura-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #2d3748 !important; /* Fuerza el color de letra oscuro */
+}
+
+/* Esto asegura que las opciones dentro del desplegable se vean */
+.factura-form select option {
+  background-color: #ffffff;
+  color: #2d3748;
+  padding: 10px;
+}
+
+.factura-form input:focus, 
+.factura-form select:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+}
+
+/* Sección de Detalles */
+.detalle-seccion {
+  grid-column: 1 / -1;
+  background: #f7fafc;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px dashed #a0aec0;
+}
+
+.detalle-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+/* Botones */
+.btn-main {
+  grid-column: 1 / -1;
+  background: #3182ce;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-main:hover {
+  background: #2b6cb0;
+}
+
+.btn-add-item {
+  background: #4a5568;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Tabla */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.factura-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.factura-table th {
+  text-align: left;
+  padding: 12px;
+  background: #edf2f7;
+  color: #4a5568;
+  font-size: 13px;
+  border-bottom: 2px solid #cbd5e0;
+}
+
+.factura-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #2d3748;
+}
+
+/* Badges de Estado */
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-1 { background: #fef3c7; color: #92400e; } /* Proceso */
+.status-2 { background: #d1fae5; color: #065f46; } /* Aprobado */
+.status-3 { background: #fee2e2; color: #991b1b; } /* Rechazado */
+
+.price {
+  font-weight: 700;
+  color: #2f855a;
+}

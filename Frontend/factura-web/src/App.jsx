@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import Clientes from './pages/Clientes';
 import Emisores from './pages/Emisores';
+import Facturas from './pages/Facturas';
 import ModalFactura from './components/ModalFactura';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/emisores" element={<Emisores />} />
+            <Route path="/facturas" element={<Facturas />} />
           </Routes>
         </div>
 

@@ -17,13 +17,11 @@ function Header() {
         <Link to="/" className="nav-item">Inicio</Link>
         <Link to="/emisores" className="nav-item">Emisores</Link>
         <Link to="/clientes" className="nav-item">Clientes</Link>
+        <Link to="/facturas" className="nav-item">Facturas</Link>
+        {/* <Link to="/reportes" className="nav-item">Reportes</Link> */}
       </nav>
 
-      <div className="header-center">
-        <div className="search-bar">
-          <input type="text" placeholder="Buscar factura o cliente..." />
-        </div>
-      </div>
+  
 
       <div className="header-right">
         <button className="btn-new-invoice">+ Nueva Factura</button>

@@ -10,14 +10,16 @@ namespace Factura.Api.DTOs
         public ActualizarEmisorDto()
         {
         }
-        public ActualizarEmisorDto(string? nit, string? razonSocial, string? direccion, string? telefono, string? email)
+        public ActualizarEmisorDto(Guid id, string? nit, string? razonSocial, string? direccion, string? telefono, string? email)
         {
+            Id = id;
             Nit = nit;
             RazonSocial = razonSocial;
             Direccion = direccion;
             Telefono = telefono;
             Email = email;
         }
+        public Guid Id { get; set; }
         public string? Nit { get; set; }
         public string? RazonSocial { get; set; }
         public string? Direccion { get; set; }

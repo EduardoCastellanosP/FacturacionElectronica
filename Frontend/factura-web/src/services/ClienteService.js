@@ -16,7 +16,7 @@ export const deleteCliente = async (Id) => {
     return response.data;
 }
 
-export const editarCliente = async (Id, clienteActualizado) => {
-    const response = await api.put(`/Clientes/${Id}`, clienteActualizado);
+export const editarCliente = async (Nit, clienteActualizado) => {
+    const response = await api.put(`/Clientes/${Nit}`, clienteActualizado);
     return response.data;
 }

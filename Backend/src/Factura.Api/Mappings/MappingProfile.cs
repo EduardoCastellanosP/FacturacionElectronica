@@ -17,9 +17,10 @@ namespace Factura.Api.Mappings
             // --- INVOICE (FACTURA) ---
             CreateMap<Invoice, ObtenerInvoiceDto>();
             CreateMap<Invoice, ListarInvoiceDto>();
-            
+
             CreateMap<CrearInvoiceDto, Invoice>();
             CreateMap<ActualizarInvoiceDto, Invoice>(); // Para el PUT
+            CreateMap<CrearInvoiceDetalleDto, DetalleFactura>();
             CreateMap<Invoice, ListarInvoiceDto>()
             // De Cliente (que ya vimos que tiene Nombres y Apellidos)
             .ForMember(dest => dest.ClienteNombre, 

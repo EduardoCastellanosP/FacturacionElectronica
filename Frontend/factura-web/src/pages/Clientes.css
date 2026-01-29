@@ -25,6 +25,7 @@ h2 {
   gap: 30px;
   width: 100%;
   align-items: start;
+  
 }
 
 /* Tarjeta del Formulario */
@@ -32,7 +33,7 @@ h2 {
   background: white;
   padding: 25px; /* Corregido de 200px a 25px */
   border-radius: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.205);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -57,7 +58,7 @@ h2 {
 
 .form-group input:focus {
   border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  box-shadow: 0 0 0 3px rgba(48, 184, 44, 0.1);
 }
 
 .form-card button {
@@ -82,7 +83,7 @@ h2 {
 .table-section {
   background: white;
   border-radius: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.205);
   border: 1px solid #e2e8f0;
   overflow: hidden;
   width: 100%;
@@ -113,9 +114,15 @@ td {
   border-bottom: 1px solid #f1f5f9;
   font-size: 0.95rem;
 }
+tr{
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  
+
+}
 
 tr:hover {
-  background-color: #f1f5f9;
+  background-color: #499ef344;
 }
 
 /* Animación */

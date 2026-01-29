@@ -148,19 +148,16 @@ function Clientes() {
               onChange={e => setNuevoCliente({...nuevoCliente, Email: e.target.value})} 
             />
             
-            {/* El color del botón y el texto cambian según el modo */}
             <button 
               type="submit" 
-              style={{ backgroundColor: editando ? '#3498db' : '#2ecc71' }}
-            >
+             style={{ backgroundColor: editando ? '#3498db' : '#2ecc71' }}
+             >
               {editando ? 'Actualizar Cliente' : 'Guardar Cliente'}
             </button>
 
             {/* Botón para salir del modo edición sin guardar */}
             {editando && (
-              <button 
-                type="button" 
-                onClick={() => { setEditando(false); setNuevoCliente({ id: '', Nit: '', Nombres: '', Apellidos: '', Direccion: '', Telefono: '', Email: '' }); }}
+              <button type="button" onClick={() => { setEditando(false); setNuevoCliente({ id: '', Nit: '', Nombres: '', Apellidos: '', Direccion: '', Telefono: '', Email: '' }); }}
                 style={{ marginTop: '10px', backgroundColor: '#95a5a6' }}
               >
                 Cancelar Edición
