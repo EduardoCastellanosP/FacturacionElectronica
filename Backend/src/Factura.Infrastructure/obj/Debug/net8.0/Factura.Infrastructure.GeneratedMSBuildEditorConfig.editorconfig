@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Factura.Infrastructure
-build_property.ProjectDir = /media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/
+build_property.ProjectDir = /media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Infrastructure/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Api/Factura.Api.csproj": {}
+    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Api/Factura.Api.csproj": {}
   },
   "projects": {
-    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Api/Factura.Api.csproj": {
+    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Api/Factura.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Api/Factura.Api.csproj",
+        "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Api/Factura.Api.csproj",
         "projectName": "Factura.Api",
-        "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Api/Factura.Api.csproj",
+        "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Api/Factura.Api.csproj",
         "packagesPath": "/home/linux/.nuget/packages/",
-        "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Api/obj/",
+        "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/linux/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj": {
-                "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj"
+              "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj": {
+                "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj"
               }
             }
           }
@@ -82,14 +82,14 @@
         }
       }
     },
-    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Application/Factura.Application.csproj": {
+    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/Factura.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Application/Factura.Application.csproj",
+        "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/Factura.Application.csproj",
         "projectName": "Factura.Application",
-        "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Application/Factura.Application.csproj",
+        "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/Factura.Application.csproj",
         "packagesPath": "/home/linux/.nuget/packages/",
-        "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Application/obj/",
+        "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/linux/.nuget/NuGet/NuGet.Config"
@@ -104,8 +104,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Domain/Factura.Domain.csproj": {
-                "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Domain/Factura.Domain.csproj"
+              "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj": {
+                "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj"
               }
             }
           }
@@ -139,14 +139,14 @@
         }
       }
     },
-    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Domain/Factura.Domain.csproj": {
+    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Domain/Factura.Domain.csproj",
+        "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj",
         "projectName": "Factura.Domain",
-        "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Domain/Factura.Domain.csproj",
+        "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj",
         "packagesPath": "/home/linux/.nuget/packages/",
-        "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Domain/obj/",
+        "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/linux/.nuget/NuGet/NuGet.Config"
@@ -192,14 +192,14 @@
         }
       }
     },
-    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj": {
+    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj",
+        "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj",
         "projectName": "Factura.Infrastructure",
-        "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj",
+        "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Infrastructure/Factura.Infrastructure.csproj",
         "packagesPath": "/home/linux/.nuget/packages/",
-        "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Infrastructure/obj/",
+        "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/linux/.nuget/NuGet/NuGet.Config"
@@ -214,11 +214,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Application/Factura.Application.csproj": {
-                "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Application/Factura.Application.csproj"
+              "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/Factura.Application.csproj": {
+                "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/Factura.Application.csproj"
               },
-              "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Domain/Factura.Domain.csproj": {
-                "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Domain/Factura.Domain.csproj"
+              "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj": {
+                "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj"
               }
             }
           }

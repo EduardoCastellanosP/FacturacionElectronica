@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Hqdp+7DkJCidMNKIkNdRFFZj7lxcKewVXooRsTfiEN74wMGAAsBaXjeC7bsmPKUr7urqZvnXg1f4dRSlIO9Bg==",
+  "dgSpecHash": "LPnXnjcOm31L7Xlni+9nfRP+5Yuk2GAAOLr/ibW6b9/RPak9Ho7rXxv4oQXExxOfvpAEnxjKuzXrLLyNL1IaJg==",
   "success": true,
-  "projectFilePath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Application/Factura.Application.csproj",
+  "projectFilePath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/Factura.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

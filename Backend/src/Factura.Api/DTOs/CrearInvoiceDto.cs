@@ -13,7 +13,7 @@ public class CrearInvoiceDto
     public string? EmisorId { get; set; }
     public DateTime FechaEmision { get; set; }
     public decimal TotalFactura { get; set; }
-    public string? DocumentoStatusId { get; set; }
+    public Guid DocumentoStatusId { get; set; }
     // Asegúrate de que este nombre coincida con el del JSON
     public List<CrearInvoiceDetalleDto> DetalleFacturas { get; set; } = new();
 }

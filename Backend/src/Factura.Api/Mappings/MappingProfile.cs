@@ -8,52 +8,53 @@ namespace Factura.Api.Mappings
     {
         public MappingProfile()
         {
-            // --- CLIENTE ---
-            CreateMap<Cliente, ListarClienteDto>();
+            // --- 1. DETALLE FACTURA ---
+            // Usamos ReverseMap para que funcione de DTO -> Entidad y viceversa
+            CreateMap<CrearInvoiceDetalleDto, DetalleFactura>().ReverseMap();
+            CreateMap<ActualizarInvoiceDetalleDto, DetalleFactura>().ReverseMap();
 
-            CreateMap<Cliente, ObtenerClienteDetalleDto>().ForMember(dest => dest.Nombres, opt => opt.MapFrom(src => $"{src.Nombres} {src.Apellidos}"));
-            CreateMap<ActualizarClienteDto, Cliente>().ReverseMap(); // Para el PUT
+            CreateMap<DetalleFactura, ListarInvoiceDetalleDto>();
+            CreateMap<DetalleFactura, ObtenerInvoiceDetalleDto>()
+                .ForMember(dest => dest.ProductoDescripcion,
+                    opt => opt.MapFrom(src => src.Producto != null ? src.Producto.Descripcion : "Sin descripción"));
 
-            // --- INVOICE (FACTURA) ---
+            // --- 2. INVOICE (FACTURA) ---
+            CreateMap<CrearInvoiceDto, Invoice>()
+                .ForMember(dest => dest.Cliente, opt => opt.Ignore())
+                .ForMember(dest => dest.Emisor, opt => opt.Ignore())
+                .ForMember(dest => dest.DocumentoStatus, opt => opt.Ignore())
+                .ForMember(dest => dest.DetalleFacturas, opt => opt.MapFrom(src => src.DetalleFacturas))
+                .ReverseMap(); // IMPORTANTE: Para que el controlador pueda devolver la factura creada
+
+            CreateMap<ActualizarInvoiceDto, Invoice>().ReverseMap();
             CreateMap<Invoice, ObtenerInvoiceDto>();
-            CreateMap<Invoice, ListarInvoiceDto>();
-
-            CreateMap<CrearInvoiceDto, Invoice>();
-            CreateMap<ActualizarInvoiceDto, Invoice>(); // Para el PUT
-            CreateMap<CrearInvoiceDetalleDto, DetalleFactura>();
+            
+            // Mapeo para la tabla de React (incluye navegación)
             CreateMap<Invoice, ListarInvoiceDto>()
-            // De Cliente (que ya vimos que tiene Nombres y Apellidos)
-            .ForMember(dest => dest.ClienteNombre, 
-                    opt => opt.MapFrom(src => $"{src.Cliente.Nombres} {src.Cliente.Apellidos}"))
-            
-            // De Emisor (usando la propiedad RazonSocial que me acabas de pasar)
-            .ForMember(dest => dest.EmisorRazonSocial, 
-                    opt => opt.MapFrom(src => src.Emisor != null ? src.Emisor.RazonSocial : "EL OBJETO EMISOR LLEGÓ NULO"))
-            
-            // De DocumentoStatus (usando la propiedad Estado)
-            .ForMember(dest => dest.Estado, 
-                    opt => opt.MapFrom(src => src.DocumentoStatus != null ? src.DocumentoStatus.Estado : "EL OBJETO DOCUMENTO STATUS LLEGÓ NULO"));
+                .ForMember(dest => dest.ClienteNombre,
+                    opt => opt.MapFrom(src => src.Cliente != null ? $"{src.Cliente.Nombres} {src.Cliente.Apellidos}" : "Cliente no asignado"))
+                .ForMember(dest => dest.EmisorRazonSocial,
+                    opt => opt.MapFrom(src => src.Emisor != null ? src.Emisor.RazonSocial : "Emisor no asignado"))
+                .ForMember(dest => dest.Estado,
+                    opt => opt.MapFrom(src => src.DocumentoStatus != null ? src.DocumentoStatus.Estado : "Estado no asignado"));
 
-            // --- DETALLE FACTURA ---
-            CreateMap<DetalleFactura, ObtenerInvoiceDetalleDto>().ForMember(dest => dest.ProductoDescripcion, opt => opt.MapFrom(src => src.Producto != null ? src.Producto.Descripcion : "Producto sin nombre"));
-            CreateMap<ActualizarInvoiceDetalleDto, DetalleFactura>(); // Para el PUT
-
-            // --- PRODUCTO ---
-            CreateMap<Producto, ObtenerProductoDto>();
-            CreateMap<CrearProductoDto, Producto>();
-            CreateMap<ActualizarProductoDto, Producto>(); // Para el PUT
-
-            // --- EMISOR ---
-            CreateMap<Emisor, CrearEmisorDto>().ReverseMap();
-            CreateMap<Emisor, ListarEmisorDto>();
-            CreateMap<Emisor, ObtenerEmisorDto>();
-            CreateMap<ActualizarEmisorDto, Emisor>(); // Mapea RazonSocial automáticamente
-            
-            // --- REVERSE MAPS (Opcionales pero útiles para respuestas) ---
+            // --- 3. CLIENTE ---
+            CreateMap<Cliente, ListarClienteDto>();
             CreateMap<Cliente, CrearClienteDto>().ReverseMap();
-            CreateMap<Invoice, CrearInvoiceDto>().ReverseMap();
-            CreateMap<DetalleFactura, CrearInvoiceDetalleDto>().ReverseMap();
+            CreateMap<ActualizarClienteDto, Cliente>().ReverseMap();
+            CreateMap<Cliente, ObtenerClienteDetalleDto>()
+                .ForMember(dest => dest.Nombres, opt => opt.MapFrom(src => $"{src.Nombres} {src.Apellidos}"));
+
+            // --- 4. EMISOR ---
+            CreateMap<Emisor, ListarEmisorDto>();
             CreateMap<Emisor, CrearEmisorDto>().ReverseMap();
+            CreateMap<Emisor, ObtenerEmisorDto>();
+            CreateMap<ActualizarEmisorDto, Emisor>().ReverseMap();
+
+            // --- 5. PRODUCTO ---
+            CreateMap<Producto, ObtenerProductoDto>();
+            CreateMap<CrearProductoDto, Producto>().ReverseMap();
+            CreateMap<ActualizarProductoDto, Producto>().ReverseMap();
         }
     }
 }

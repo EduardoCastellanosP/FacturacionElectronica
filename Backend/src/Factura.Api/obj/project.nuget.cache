@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R2uHudSd5SqZxWKYSRvEueg3V/50zHafhJwNsj4Pj8vzsgTIYdAcPkgBZKe6fEVxhhD1l1mNqpHHFqpuE/H4Eg==",
+  "dgSpecHash": "D6Dhmoi4fCvCm/EnTwvrBi7+yi5oTtPi0zhNRiueWrL8RfR9OPz8JD800bVfNeZDM97IHYrxkUpGooQOjBjmPA==",
   "success": true,
-  "projectFilePath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica/Backend/src/Factura.Api/Factura.Api.csproj",
+  "projectFilePath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Api/Factura.Api.csproj",
   "expectedPackageFiles": [
     "/home/linux/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/home/linux/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

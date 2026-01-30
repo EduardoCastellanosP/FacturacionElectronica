@@ -21,7 +21,7 @@ function Factura() {
     EmisorId: '',
     FechaEmision: '',
     TotalFactura: '',
-    DocumentoStatusId: '1',
+    DocumentoStatusId: 'aca85f64-5717-4562-b3fc-2c963f66afa6',
     DetalleFacturas: [] 
   });
 
@@ -32,26 +32,50 @@ function Factura() {
     PrecioUnitario: 0
   });
 
+
   // Carga inicial de datos
   const cargarTodo = async () => {
-    try {
-      // Usamos Promise.all para cargar todo en paralelo
-      const [resFacturas, resClientes, resEmisores] = await Promise.all([
-        getFacturas(),
-        getClientes(),
-        getEmisores()
-      ]);
-      setFacturas(resFacturas || []);
-      setListaClientes(resClientes || []);
-      setListaEmisores(resEmisores || []);
-    } catch (error) {
-      console.error("Fallo al cargar datos:", error);
-    }
-  };
+  try {
+    // 1. Probamos Clientes por separado
+    const dataClientes = await getClientes();
+    console.log("Clientes OK:", dataClientes);
+    setListaClientes(dataClientes || []);
 
-  useEffect(() => {
-    cargarTodo();
-  }, []);
+    // 2. Probamos Emisores por separado
+    const dataEmisores = await getEmisores();
+    console.log("Emisores OK:", dataEmisores);
+    setListaEmisores(dataEmisores || []);
+
+    // 3. Probamos Facturas por separado
+    const dataFacturas = await getFacturas();
+    console.log("Facturas OK:", dataFacturas);
+    setFacturas(dataFacturas || []);
+
+  } catch (error) {
+    console.error("Error específico detectado:");
+    console.error("URL llamada:", error.config?.url);
+    console.error("Status:", error.response?.status);
+    console.error("Data del error:", error.response?.data);
+  }
+};
+useEffect(() => {
+  cargarTodo();
+  
+}, []); // Se ejecuta una sola vez al cargar el componente
+  const resetForm = () => {
+  setNuevaFactura({
+    ClienteId: '',
+    EmisorId: '',
+    FechaEmision: '',
+    TotalFactura: '',
+    // Usamos el ID de "En Proceso" que ya tienes en la DB
+    DocumentoStatusId: 'aca85f64-5717-4562-b3fc-2c963f66afa6',
+    DetalleFacturas: [] 
+  });
+  setNuevoDetalle({ ProductoId: '', Cantidad: 1, PrecioUnitario: 0 });
+  setEditando(false);
+};
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -81,7 +105,7 @@ function Factura() {
     const datosParaEnviar = {
       ...nuevaFactura,
       TotalFactura: parseFloat(nuevaFactura.TotalFactura), // Asegurar que sea número
-      DocumentoStatusId: nuevaFactura.DocumentoStatusId.toString(),
+      DocumentoStatusId: nuevaFactura.documentoStatusId || "aca85f64-5717-4562-b3fc-2c963f66afa6",
       // Mapeamos los detalles para que coincidan con CrearInvoiceDetalleDto
       DetalleFacturas: nuevaFactura.DetalleFacturas.map(d => ({
         ProductoId: d.ProductoId,
@@ -100,8 +124,10 @@ function Factura() {
     resetForm();
     cargarTodo();
   } catch (error) {
-    console.error("Error detallado:", error.response?.data);
-    Swal.fire("Error 500", "Problema de mapeo en el servidor", "error");
+    console.error("Error capturado:", error);
+    // Mejora la lectura del error
+    const msg = error.response?.data?.message || "Error interno del servidor";
+    Swal.fire("Error", msg, "error");
   }
 };
 
@@ -136,28 +162,41 @@ function Factura() {
 
         <section className="factura-card">
           <form className="factura-form" onSubmit={handleSubmit}>
-            <select name="ClienteId" onChange={handleChange} value={nuevaFactura.ClienteId} required>
-              <option value="">-- Cliente --</option>
-              {listaClientes.map(c => (
-                <option key={c.Id || c.id} value={c.Id || c.id}>{c.Nombres} {c.Apellidos}</option>
-              ))}
+
+           <select 
+                name="ClienteId" 
+                onChange={handleChange} 
+                value={nuevaFactura.ClienteId} 
+                
+              >
+                <option value="">Seleccione el Cliente</option>
+                {listaClientes.map(c => (
+                  <option key={c.id || c.Id} value={c.id || c.Id}>
+                    {/* Probamos ambas versiones para no fallar */}
+                    {(c.nombres || c.Nombres || "Sin Nombre")} {(c.apellidos || c.Apellidos || "")}
+                  </option>
+                ))}
             </select>
 
-            <select name="EmisorId" onChange={handleChange} value={nuevaFactura.EmisorId} required>
-              <option value="">-- Emisor --</option>
-              {listaEmisores.map(e => (
-                <option key={e.Id || e.id} value={e.Id || e.id}>{e.NombreLegal}</option>
-              ))}
-            </select>
+            <select name="EmisorId" onChange={handleChange} value={nuevaFactura.EmisorId}>
+  <option value="">Seleccione el Emisor</option>
+  {listaEmisores.map(e => (
+    <option key={e.Id || e.id} value={e.Id || e.id}>
+      {/* Usamos RazonSocial que es el nombre real en tu DB */}
+      {e.RazonSocial || e.razonSocial || "Emisor sin nombre"}
+    </option>
+  ))}
+</select>
 
             <input name="FechaEmision" type="date" onChange={handleChange} value={nuevaFactura.FechaEmision} required />
             <input name="TotalFactura" type="number" placeholder="Total" onChange={handleChange} value={nuevaFactura.TotalFactura} required />
             
             <select name="DocumentoStatusId" onChange={handleChange} value={nuevaFactura.DocumentoStatusId}>
-              <option value="1">⏳ Proceso</option>
-              <option value="2">✅ Aprobado</option>
-              <option value="3">❌ Rechazado</option>
-            </select>
+            <option value="">-- Selecciona Estado --</option>
+            {/* Reemplaza estos IDs con los de tu base de datos */}
+            <option value="aca85f64-5717-4562-b3fc-2c963f66afa6">⏳ En Proceso</option>
+            <option value="bba85f64-5717-4562-b3fc-2c963f66afa6">✅ Aprobado</option>
+          </select>
 
             <div className="detalle-seccion">
               <div className="detalle-inputs">
