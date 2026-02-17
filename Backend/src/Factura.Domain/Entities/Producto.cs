@@ -8,7 +8,7 @@ namespace Backend.src.Factura.Domain.Entities
 {
     public class Producto : BaseEntity
     {
-        public int Codigo { get; set; }
+        public string? Codigo { get; set; }
         public string? Descripcion { get; set; }
     }
 }

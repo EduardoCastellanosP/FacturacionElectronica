@@ -44,3 +44,15 @@
 /media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/obj/Debug/net8.0/refint/Factura.Domain.dll
 /media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/obj/Debug/net8.0/Factura.Domain.pdb
 /media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/obj/Debug/net8.0/ref/Factura.Domain.dll
+d:\FacturacionElectronica\Backend\src\Factura.Domain\bin\Debug\net8.0\Factura.Domain.deps.json
+d:\FacturacionElectronica\Backend\src\Factura.Domain\bin\Debug\net8.0\Factura.Domain.dll
+d:\FacturacionElectronica\Backend\src\Factura.Domain\bin\Debug\net8.0\Factura.Domain.pdb
+d:\FacturacionElectronica\Backend\src\Factura.Domain\obj\Debug\net8.0\Factura.Domain.GeneratedMSBuildEditorConfig.editorconfig
+d:\FacturacionElectronica\Backend\src\Factura.Domain\obj\Debug\net8.0\Factura.Domain.AssemblyInfoInputs.cache
+d:\FacturacionElectronica\Backend\src\Factura.Domain\obj\Debug\net8.0\Factura.Domain.AssemblyInfo.cs
+d:\FacturacionElectronica\Backend\src\Factura.Domain\obj\Debug\net8.0\Factura.Domain.csproj.CoreCompileInputs.cache
+d:\FacturacionElectronica\Backend\src\Factura.Domain\obj\Debug\net8.0\Factura.Domain.sourcelink.json
+d:\FacturacionElectronica\Backend\src\Factura.Domain\obj\Debug\net8.0\Factura.Domain.dll
+d:\FacturacionElectronica\Backend\src\Factura.Domain\obj\Debug\net8.0\refint\Factura.Domain.dll
+d:\FacturacionElectronica\Backend\src\Factura.Domain\obj\Debug\net8.0\Factura.Domain.pdb
+d:\FacturacionElectronica\Backend\src\Factura.Domain\obj\Debug\net8.0\ref\Factura.Domain.dll

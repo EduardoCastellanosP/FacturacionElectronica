@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Factura.Domain.Entities;
@@ -41,6 +40,11 @@ namespace Factura.Infrastructure.Persitence.Configurations
 
             builder.Property(e => e.Direccion)
                 .HasMaxLength(200);
+
+             builder.HasOne<Producto>() 
+           .WithMany() 
+           .HasForeignKey(c => c.CodigoProducto) // Esta es la columna que falta en tu imagen
+           .HasPrincipalKey(p => p.Codigo);   
 
             // Definición explícita de la relación 1:N
             builder.HasMany(e => e.Invoices)

@@ -675,12 +675,18 @@
           "Factura.Domain": "1.0.0"
         },
         "runtime": {
-          "Factura.Application.dll": {}
+          "Factura.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Factura.Domain/1.0.0": {
         "runtime": {
-          "Factura.Domain.dll": {}
+          "Factura.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

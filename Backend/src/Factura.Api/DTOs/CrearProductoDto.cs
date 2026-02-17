@@ -11,12 +11,12 @@ namespace Factura.Api.DTOs;
     {
     }
 
-    public CrearProductoDto(int codigo, string? descripcion)
+    public CrearProductoDto(string? codigo, string? descripcion)
     {
         Codigo = codigo;
         Descripcion = descripcion;
     }
 
-    public int Codigo { get; set; }
+    public string? Codigo { get; set; }
     public string? Descripcion { get; set; }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/Factura.Application.csproj": {}
+    "D:\\FacturacionElectronica\\Backend\\src\\Factura.Application\\Factura.Application.csproj": {}
   },
   "projects": {
-    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/Factura.Application.csproj": {
+    "D:\\FacturacionElectronica\\Backend\\src\\Factura.Application\\Factura.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/Factura.Application.csproj",
+        "projectUniqueName": "D:\\FacturacionElectronica\\Backend\\src\\Factura.Application\\Factura.Application.csproj",
         "projectName": "Factura.Application",
-        "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/Factura.Application.csproj",
-        "packagesPath": "/home/linux/.nuget/packages/",
-        "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Application/obj/",
+        "projectPath": "D:\\FacturacionElectronica\\Backend\\src\\Factura.Application\\Factura.Application.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\FacturacionElectronica\\Backend\\src\\Factura.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/linux/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj": {
-                "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj"
+              "D:\\FacturacionElectronica\\Backend\\src\\Factura.Domain\\Factura.Domain.csproj": {
+                "projectPath": "D:\\FacturacionElectronica\\Backend\\src\\Factura.Domain\\Factura.Domain.csproj"
               }
             }
           }
@@ -36,7 +36,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -52,26 +58,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj": {
+    "D:\\FacturacionElectronica\\Backend\\src\\Factura.Domain\\Factura.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj",
+        "projectUniqueName": "D:\\FacturacionElectronica\\Backend\\src\\Factura.Domain\\Factura.Domain.csproj",
         "projectName": "Factura.Domain",
-        "projectPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj",
-        "packagesPath": "/home/linux/.nuget/packages/",
-        "outputPath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/obj/",
+        "projectPath": "D:\\FacturacionElectronica\\Backend\\src\\Factura.Domain\\Factura.Domain.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\FacturacionElectronica\\Backend\\src\\Factura.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/linux/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -89,7 +109,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -105,12 +131,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -17,14 +17,14 @@ namespace Factura.Infrastructure.Persistence.Repositories
             _context = context;
         }
 
-        public async Task<bool> ExistsProductoAsync(Guid productoId, CancellationToken cancellationToken = default)
+        public async Task<bool> ExisteCodigoAsync(string codigo, CancellationToken cancellationToken = default)
         {
-            return await _context.Productos.AnyAsync(p => p.Id == productoId, cancellationToken);
+            return await _context.Productos.AnyAsync(p => p.Codigo == codigo, cancellationToken);
         }
 
-        public async Task<Producto?> ObtenerProductoById(Guid productoId, CancellationToken cancellationToken = default)
+        public async Task<Producto?> ObtenerProductoByCodigo(string codigo, CancellationToken cancellationToken = default)
         {
-            return await _context.Productos.FindAsync(new object[] { productoId }, cancellationToken);
+            return await _context.Productos.FirstOrDefaultAsync(p => p.Codigo == codigo, cancellationToken);
         }
 
         public async Task<IReadOnlyList<Producto>> ObtenerTodosProductos(CancellationToken cancellationToken = default)

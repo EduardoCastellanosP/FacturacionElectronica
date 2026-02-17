@@ -14,6 +14,7 @@ namespace Backend.src.Factura.Domain.Entities
         public string? Email { get; set; }
         public string? Telefono { get; set; }
         public string? Direccion { get; set; }
+        public string? CodigoProducto { get; set; } // Nueva propiedad para la relación con Producto
 
         public ICollection<Invoice>? Invoices { get; set; }
     }

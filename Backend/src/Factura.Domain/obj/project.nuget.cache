@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "00xgvIuJipT/Yj7/1f04cMq5CEkiaZLw3uoAWJmiiKNe2EUmqCnpxR6EH6bxiT9k58zHo2EODY/VNrSi7BAU3w==",
+  "dgSpecHash": "IbKIH0exulU=",
   "success": true,
-  "projectFilePath": "/media/linux/9214505714504081/ConexusApp/FacturacionElectronica-3/Backend/src/Factura.Domain/Factura.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\FacturacionElectronica\\Backend\\src\\Factura.Domain\\Factura.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.19\\microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.19\\microsoft.windowsdesktop.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.19\\microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512"
+  ],
   "logs": []
 }

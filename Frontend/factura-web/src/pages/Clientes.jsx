@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 // 1. IMPORTANTE: Añadir editarCliente al import
 import { getClientes, createCliente, deleteCliente, editarCliente } from '../services/ClienteService';
+import {getProducto, createProducto, deleteProducto, editarProducto} from '../services/productoService'; 
 import './Clientes.css';
 import Swal from 'sweetalert2';
 
@@ -8,7 +9,33 @@ function Clientes() {
   const [clientes, setClientes] = useState([]);
   // 2. Estado para saber si estamos editando
   const [editando, setEditando] = useState(false);
-  
+  const [productos, setProductos] = useState([]);
+
+useEffect(() => {
+    const fetchProductos = async () => {
+        try {
+            const data = await getProductos(); // Asegúrate de que esta función exista en productoService
+            setProductos(data);
+        } catch (error) {
+            console.error("Error cargando productos:", error);
+        }
+    };
+    fetchProductos();
+}, []);  
+
+const cargarProductos = async () => {
+    try {
+      const data = await getProducto();
+      setProductos(data);
+    } catch (error) {
+      console.error("Error al cargar productos", error);
+    }
+  };
+
+  const[productoSeleccionado, setProductoSeleccionado] = useState(null);
+
+  useEffect(() => { cargarProductos(); }, []);
+
   const [nuevoCliente, setNuevoCliente] = useState({ 
     id: '', // Agregamos id para el modo edición
     Nit: '', 
@@ -16,7 +43,9 @@ function Clientes() {
     Apellidos: '', 
     Direccion: '', 
     Telefono: '', 
-    Email: '' 
+    Email: '' ,
+    codigo: '' ,
+    descripcion: ''
   });
 
   const cargar = async () => {
@@ -46,6 +75,12 @@ function Clientes() {
         });
       } else {
         // MODO CREACIÓN
+         const nuevoProducto = {
+          codigo: nuevoCliente.codigo,
+          descripcion: nuevoCliente.descripcion
+        };
+        await createProducto(nuevoProducto);
+        
         await createCliente(nuevoCliente);
         Swal.fire({
           title: '¡Éxito!',
@@ -54,10 +89,16 @@ function Clientes() {
           confirmButtonColor: '#3498db',
           timer: 1500
         });
+
+       
+
+
       }
 
+      
+
       // --- LIMPIEZA COMÚN ---
-      setNuevoCliente({ id: '', Nit: '', Nombres: '', Apellidos: '', Direccion: '', Telefono: '', Email: '' });
+      setNuevoCliente({ id: '', Nit: '', Nombres: '', Apellidos: '', Direccion: '', Telefono: '', Email: '', codigo: '', descripcion: '' });
       setEditando(false);
       cargar();
 
@@ -103,7 +144,9 @@ function Clientes() {
       Apellidos: c.apellidos,
       Direccion: c.direccion,
       Telefono: c.telefono,
-      Email: c.email
+      Email: c.email,
+      Codigo: c.codigo,
+      Descripcion: c.descripcion,
     });
     setEditando(true);
   };
@@ -147,7 +190,18 @@ function Clientes() {
               value={nuevoCliente.Email}
               onChange={e => setNuevoCliente({...nuevoCliente, Email: e.target.value})} 
             />
-            
+
+            <input 
+              placeholder="Código del producto" 
+              value={nuevoCliente.Codigo}
+              onChange={e => setNuevoCliente({...nuevoCliente, Codigo: e.target.value})} 
+            />
+            <input 
+              placeholder="Descripción del producto" 
+              value={nuevoCliente.Descripcion}
+              onChange={e => setNuevoCliente({...nuevoCliente, Descripcion: e.target.value})} 
+            />
+
             <button 
               type="submit" 
              style={{ backgroundColor: editando ? '#3498db' : '#2ecc71' }}
@@ -157,7 +211,7 @@ function Clientes() {
 
             {/* Botón para salir del modo edición sin guardar */}
             {editando && (
-              <button type="button" onClick={() => { setEditando(false); setNuevoCliente({ id: '', Nit: '', Nombres: '', Apellidos: '', Direccion: '', Telefono: '', Email: '' }); }}
+              <button type="button" onClick={() => { setEditando(false); setNuevoCliente({ id: '', Nit: '', Nombres: '', Apellidos: '', Direccion: '', Telefono: '', Email: '', Codigo: '', Descripcion: '' }); }}
                 style={{ marginTop: '10px', backgroundColor: '#95a5a6' }}
               >
                 Cancelar Edición
@@ -176,6 +230,8 @@ function Clientes() {
                 <th>Dirección</th>
                 <th>Teléfono</th>
                 <th>Email</th>
+                <th>Codigo</th>
+                <th>Descripción</th>
                 <th>Acciones</th>
               </tr>
             </thead>
@@ -188,6 +244,8 @@ function Clientes() {
                   <td>{c.direccion}</td>
                   <td>{c.telefono}</td>
                   <td>{c.email}</td>
+                  <td>{c.codigo}</td>
+                  <td>{c.descripcion}</td>
                   <td>
                     <button className="btn-editar" type="button" onClick={() => handleditar(c)}>Editar</button>
                     <button className="btn-delete" type="button" onClick={() => handleEliminar(c.id)}>Eliminar</button>
